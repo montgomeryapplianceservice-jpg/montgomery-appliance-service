@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Montgomery Appliance Service</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Montgomery Appliance Service</h1>
+      <p class="sub">Repair • Installation • Diagnostics</p>
+      <div class="cta-row">
+        <a class="btn primary" href="tel:+16812617179">Call 681-261-7179</a>
+        <a class="btn" href="mailto:montgomeryapplianceservice@gmail.com">Email us</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Book a Service</h2>
+      <p>Fast, reliable, local. Serving Montgomery County, MD.</p>
+      <form id="reqForm" class="grid">
+        <input class="input" placeholder="Full name" required>
+        <input class="input" placeholder="Phone e.g. 681-261-7179" required>
+        <input class="input" type="email" placeholder="Email">
+        <input class="input" placeholder="City / ZIP">
+        <input class="input wide" placeholder="Service address">
+        <select class="input">
+          <option>Appliance type</option>
+          <option>Refrigerator</option>
+          <option>Washer</option>
+          <option>Dryer</option>
+          <option>Dishwasher</option>
+          <option>Oven / Range</option>
+          <option>Cooktop</option>
+          <option>Microwave</option>
+          <option>Garbage Disposal</option>
+          <option>Other</option>
+        </select>
+        <input class="input" type="date">
+        <select class="input">
+          <option>Preferred time</option>
+          <option>ASAP</option>
+          <option>Morning</option>
+          <option>Afternoon</option>
+          <option>Evening</option>
+        </select>
+        <textarea class="input wide" rows="5" placeholder="Describe the issue"></textarea>
+        <button class="btn primary wide" type="submit">Submit Request</button>
+      </form>
+      <p class="small">By submitting you agree to our Terms and Privacy.</p>
+    </section>
+
+    <section class="card">
+      <h2>How it works</h2>
+      <ol>
+        <li>Send your request with appliance details.</li>
+        <li>We confirm time and diagnostic window.</li>
+        <li>Technician arrives and quotes the repair.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © <span id="y"></span> Montgomery Appliance Service — 681-261-7179 • montgomeryapplianceservice@gmail.com
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    document.getElementById('reqForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thanks! Your request was saved. We will contact you shortly.');
+    });
+  </script>
+</body>
+</html>
